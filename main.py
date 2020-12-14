@@ -55,7 +55,11 @@ funFacts = [
 'Sunlight takes about 8.3 minutes to reach the Earth from the surface of the Sun. A photon starting at the centre of the sun and changing direction every time it encounters a charged particle would take between 10 000 and 170 000 years to get to the surface.',
 "Cerf proposed the bet and challenged that Dr. Seuss would not be able to write an entertaining children's book using only 50 different words. Dr. Seuss took the bet and won. The result was a little book called Green Eggsand Ham.", "The Hunchback of Notre-Dame (French: Notre-Dame de Paris) is a French Romantic/Gothic novel by Victor Hugo published in 1831. The title refers to the Notre Dame Cathedral in Paris, on which the story is centered.",
 "Number 4 is considered an unlucky number in Chinese because it is nearly homophonous to the word 'death' (pinyin si). Due to that, many numbered product lines skip the '4': e.g., Nokia cell phones (there is no series beginning with a 4), Palm PDAs, Canon PowerShot G's series...", "'The Statue of Liberty Enlightening the World' was a gift of friendship from the people of France to the United States and is recognized as a universal symbol of freedom and democracy. The Statue of Liberty was dedicated on October 28, 1886. It was designated as a National Monument in 1924.",
-"Bette Nesmith Graham. Bette Claire Graham (March 23, 1924 – May 12, 1980) was an American typist, commercial artist, and the inventor of Liquid Paper. She was also the mother of musician and producer Michael Nesmith of The Monkees."]
+"Bette Nesmith Graham. Bette Claire Graham (March 23, 1924 – May 12, 1980) was an American typist, commercial artist, and the inventor of Liquid Paper. She was also the mother of musician and producer Michael Nesmith of The Monkees.",
+"Honey bees do not have sensory organs that can pick up sounds that we can hear.",
+"On December 23 1924, the first successful living-related kidney transplant was led by Dr. Joseph Murray and Dr. David Hume at Brigham Hospital in Boston. A kidney was transplanted from Ronald Herrick into his identical twin, Richard.",
+"A falling person will reach terminal velocity after about 12 seconds, falling some 450 m (about 1,500 ft) in that time. That person will not then fall any faster, so it makes no difference what distance they fall if it is more than 1,500 ft - they will still reach the ground at the same speed."
+]
 
 def funFact():
     if len(funFacts) > 0:
@@ -93,6 +97,8 @@ def action():
         print("You expected Za Warudo but it was me " + bcolors.WARNING + 'Dio\n\n' + bcolors.ENDC)
         action()
     elif choiceIntro == 4:
+        if len(funFacts) > 0:
+            print("Let me teach you something")
         funFact()
 
 action()
