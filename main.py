@@ -85,6 +85,9 @@ def funFact():
         print("You already know everything I can tell you.")
         action()
 
+def aGame():
+    print("Hello " + name)
+
 def action():
     choiceIntro = input("Now, what shall we do? What do you think " + name + "?\n" + bcolors.OKGREEN + "1)idk 2)let's play a game 3)Za Warudo 4)Fun Facts" + bcolors.FAIL + '\n\n>>' + bcolors.ENDC)
     if choiceIntro <= 1:
@@ -98,7 +101,13 @@ def action():
         action()
     elif choiceIntro == 4:
         if len(funFacts) > 0:
-            print("Let me teach you something")
+            print("Let me teach you something.\n")
         funFact()
+    elif choiceIntro == 5:
+        yesno = input("Would you like to play a game with me?"+bcolors.OKGREEN+"1)Yup 2)No thanks"+bcolors.ENDC)
+        if yesno <= 1:
+            aGame()
+        if yesno == 2:
+            action()
 
 action()
